@@ -1,0 +1,33 @@
+package overidingmethod;
+     class Animal {
+		    public Animal getAnimal() {
+		        System.out.println("Animal: Returning an Animal");
+		        return this;
+		    }
+		    public void sound() {
+		        System.out.println("Animal makes a sound");
+		    }
+		}
+      class Dog extends Animal {
+		    public Dog getAnimal() { 
+		    	System.out.println("Dog: Returning a Dog");
+		        return this;
+		    }
+		    public void sound() {
+		        System.out.println("Dog barks");
+		    }
+		}
+         public class Animalsound {
+		    public static void main(String[] args) {
+		         Animal a = new Animal();
+		        a.getAnimal().sound();
+                System.out.println();
+		        Dog d = new Dog();
+		        d.getAnimal().sound();
+                System.out.println();
+                Animal ad = new Dog();
+		        ad.getAnimal().sound();
+		    }
+		}
+
+
